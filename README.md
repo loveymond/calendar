@@ -12,6 +12,93 @@
 日期：2013-10-10
 
 
+文档说明
+========
+
+应用
+----
+
+在页面中引入Javascript和CSS文件，并且按照站点的主题样式编辑CSS和修复CSS文件中图片的路径。
+
+```HTML
+<link rel="stylesheet" media="screen" type="text/css" href="css/datepicker.css" />
+<script type="text/javascript" src="js/datepicker.js"></script>
+```
+                
+调用代码
+--------
+
+你需要做的仅仅是利用jQuery指定一个需要调用日历插件的元素。
+
+```JS
+$('input').DatePicker(options);
+```
+                
+选项
+----
+
+A hash of parameters. All parameters are optional.
+
+* `eventName`   string  指定需要调用日历的期望事件。默认是'click'
+* `date`    String, Date or array   The selected date(s) as string (will be converted to Date object based on teh format suplied) and Date object for single selection, as Array of strings or Date objects
+* `flat`    boolean Whatever if the date picker is appended to the element or triggered by an event. Default false
+* `start`   integer 指定一周的第一天。 默认是1（星期一）
+* `prev`    string  HTML inserted to previous links. Default '◀' (UNICODE black left arrow)
+* `next`    string  HTML inserted to next links. Default '▶' (UNICODE black right arrow)
+* `mode`    string ['single'|'multiple'|'range']    Date selection mode. Default 'single'
+* `view`    string ['days'|'months'|'years']    Start view mode. Default 'days'
+* `calendars`   integer Number of calendars to render inside the date picker. Default 1
+* `format`  string  Date format. Default 'Y-m-d'
+* `position`    string ['top'|'left'|'right'|'bottom']  Date picker's position relative to the trigegr element (non flat mode only). Default 'bottom'
+* `locale`  hash    Location: provide a hash with keys 'days', 'daysShort', 'daysMin', 'months', 'monthsShort', 'week'. Default english
+* `onShow`  function    当日历显示时的回调函数。
+* `onBeforeShow`    function    日历显示之前的回调函数。
+* `onHide`  function    当日历隐藏时的回调函数
+* `onChange`    function    当日期改变时的回调函数
+* `onRender`    function    Callback function triggered when the date is rendered inside a calendar. It should return and hash with keys: 'selected' to select the date, 'disabled' to disable the date, 'className' for additional CSS class
+
+Set date
+--------
+
+If you want to set a diferent date selection.
+
+```JS
+$('input').DatePickerSetDate(date, shiftTo);
+```
+
+The 'date' argument is the same format as the option 'date' and the 'shiftTo' argument (boolean) moves the curent month view to the date selection provided.
+
+Get date
+--------
+
+Get date selection.
+
+```JS
+$('input').DatePickerGetDate(formated);
+```
+
+Set 'formated' to true if you whant to get teh selection formated.
+
+Show and hide date picker
+-------------------------
+
+Show or hide a date picker.
+
+```JS
+$('input').DatePickerShow();
+$('input').DatePickerHide();
+```
+
+Clear multiple selection
+------------------------
+
+Clear selection in multiple and range mode
+
+```JS
+$('#datepicker').DatePickerClear();
+```
+
+
 * * * * *
 
 Abstract
