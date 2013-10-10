@@ -37,20 +37,20 @@ $('input').DatePicker(options);
 选项
 ----
 
-A hash of parameters. All parameters are optional.
+参数的哈希表。所有的参数均是可选的。
 
 * `eventName`   string  指定需要调用日历的期望事件。默认是'click'
 * `date`    String, Date or array   The selected date(s) as string (will be converted to Date object based on teh format suplied) and Date object for single selection, as Array of strings or Date objects
-* `flat`    boolean Whatever if the date picker is appended to the element or triggered by an event. Default false
+* `flat`    boolean 是否将日历选择器设置成一个元素，亦或作为一个元素的事件。 默认是 false
 * `start`   integer 指定一周的第一天。 默认是1（星期一）
-* `prev`    string  HTML inserted to previous links. Default '◀' (UNICODE black left arrow)
-* `next`    string  HTML inserted to next links. Default '▶' (UNICODE black right arrow)
-* `mode`    string ['single'|'multiple'|'range']    Date selection mode. Default 'single'
-* `view`    string ['days'|'months'|'years']    Start view mode. Default 'days'
-* `calendars`   integer Number of calendars to render inside the date picker. Default 1
-* `format`  string  Date format. Default 'Y-m-d'
-* `position`    string ['top'|'left'|'right'|'bottom']  Date picker's position relative to the trigegr element (non flat mode only). Default 'bottom'
-* `locale`  hash    Location: provide a hash with keys 'days', 'daysShort', 'daysMin', 'months', 'monthsShort', 'week'. Default english
+* `prev`    string  前一项连接的HTML字符。 默认是 '◀' (UNICODE 黑色左箭头)
+* `next`    string  后一项连接的HTML字符。 默认是 '▶' (UNICODE 黑色右箭头)
+* `mode`    string ['single'|'multiple'|'range']    日期选择模式. 默认是 'single'
+* `view`    string ['days'|'months'|'years']    开始的视图模式. 默认是 'days'
+* `calendars`   integer 在日历选择区域中渲染的日历数量。 默认是 1
+* `format`  string  日期格式. 默认是 'Y-m-d'
+* `position`    string ['top'|'left'|'right'|'bottom']  日历相对触发元素的位置。(flat模式不支持本选项). 默认是 'bottom'
+* `locale`  hash    Location: provide a hash with keys 'days', 'daysShort', 'daysMin', 'months', 'monthsShort', 'week'. 默认是 english
 * `onShow`  function    当日历显示时的回调函数。
 * `onBeforeShow`    function    日历显示之前的回调函数。
 * `onHide`  function    当日历隐藏时的回调函数
@@ -152,7 +152,7 @@ A hash of parameters. All parameters are optional.
 * `view`    string ['days'|'months'|'years']    Start view mode. Default 'days'
 * `calendars`   integer Number of calendars to render inside the date picker. Default 1
 * `format`  string  Date format. Default 'Y-m-d'
-* `position`    string ['top'|'left'|'right'|'bottom']  Date picker's position relative to the trigegr element (non flat mode only). Default 'bottom'
+* `position`    string ['top'|'left'|'right'|'bottom']  Date picker's position relative to the trigger element (non flat mode only). Default 'bottom'
 * `locale`  hash    Location: provide a hash with keys 'days', 'daysShort', 'daysMin', 'months', 'monthsShort', 'week'. Default english
 * `onShow`  function    Callback function triggered when the date picker is shown
 * `onBeforeShow`    function    Callback function triggered before the date picker is shown
