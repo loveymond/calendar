@@ -57,42 +57,42 @@ A hash of parameters. All parameters are optional.
 * `onChange`    function    当日期改变时的回调函数
 * `onRender`    function    Callback function triggered when the date is rendered inside a calendar. It should return and hash with keys: 'selected' to select the date, 'disabled' to disable the date, 'className' for additional CSS class
 
-Set date
+设置日期
 --------
 
-If you want to set a diferent date selection.
+如果你想要设置一个不同的日期：
 
 ```JS
 $('input').DatePickerSetDate(date, shiftTo);
 ```
 
-The 'date' argument is the same format as the option 'date' and the 'shiftTo' argument (boolean) moves the curent month view to the date selection provided.
+`date`参数与选项`date`中的格式一致；`shiftTo`（布尔值）参数则表示是否从当前月移动到选择日期的月份视图。
 
-Get date
+获取日期
 --------
 
-Get date selection.
+获得选中的日期。
 
 ```JS
 $('input').DatePickerGetDate(formated);
 ```
 
-Set 'formated' to true if you whant to get teh selection formated.
+如果你想得到一个格式化好的日期，则需要讲formated设置为真。
 
-Show and hide date picker
--------------------------
+显示或隐藏日历
+--------------
 
-Show or hide a date picker.
+显示或隐藏日历
 
 ```JS
 $('input').DatePickerShow();
 $('input').DatePickerHide();
 ```
 
-Clear multiple selection
-------------------------
+清除多选
+--------
 
-Clear selection in multiple and range mode
+在范围选择模式下清除多选。
 
 ```JS
 $('#datepicker').DatePickerClear();
@@ -169,7 +169,7 @@ If you want to set a diferent date selection.
 $('input').DatePickerSetDate(date, shiftTo);
 ```
 
-The 'date' argument is the same format as the option 'date' and the 'shiftTo' argument (boolean) moves the curent month view to the date selection provided.
+The 'date' argument is the same format as the option 'date' and the 'shiftTo' argument (boolean) moves the current month view to the date selection provided.
 
 Get date
 --------
@@ -180,7 +180,7 @@ Get date selection.
 $('input').DatePickerGetDate(formated);
 ```
 
-Set 'formated' to true if you whant to get teh selection formated.
+Set 'formated' to true if you want to get the selection formated.
 
 Show and hide date picker
 -------------------------
