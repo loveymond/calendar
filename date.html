@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css/datepicker.css">
+        <link rel="stylesheet" href="css/datepicker_normal.css">
         <meta charset="utf-8">
     </head>
     <body>
         <input type="text" id="inputDate" value="2013-1-4">
+        <div id="datepick"></div>
     </body>
     <script src="http://lib.jishuer.com/jquery-1.10.2.min.js"></script>
     <script src="js/datepicker_sc.js"></script>
     <script>
         $('#inputDate').DatePicker({
+            flat: false,
             format:'Y-m-d',
             date: $('#inputDate').val(),
             current: $('#inputDate').val(),
@@ -21,10 +23,15 @@
             },
             onChange: function(formated, dates){
                 $('#inputDate').val(formated);
-                if ($('#closeOnSelect input').attr('checked')) {
-                    $('#inputDate').DatePickerHide();
-                }
             }
+        });
+
+        $('#datepick').DatePicker({
+            flat: true,
+            date: "",
+            starts: 1,
+            position: 'bottom',
+            calendars: 1
         });
     </script>
 </html>
