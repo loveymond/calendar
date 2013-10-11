@@ -40,7 +40,7 @@ $('input').DatePicker(options);
 参数的哈希表。所有的参数均是可选的。
 
 * `eventName`   string  指定需要调用日历的期望事件。默认是'click'
-* `date`    String, Date or array   The selected date(s) as string (will be converted to Date object based on teh format suplied) and Date object for single selection, as Array of strings or Date objects
+* `date`    String, Date or array   The selected date(s) as string (will be converted to Date object based on the format suplied) and Date object for single selection, as Array of strings or Date objects
 * `flat`    boolean 是否将日历选择器设置成一个元素，亦或作为一个元素的事件。 默认是 false
 * `start`   integer 指定一周的第一天。 默认是1（星期一）
 * `prev`    string  前一项连接的HTML字符。 默认是 '◀' (UNICODE 黑色左箭头)
@@ -143,7 +143,7 @@ Options
 A hash of parameters. All parameters are optional.
 
 * `eventName`   string  The desired event to trigger the date picker. Default: 'click'
-* `date`    String, Date or array   The selected date(s) as string (will be converted to Date object based on teh format suplied) and Date object for single selection, as Array of strings or Date objects
+* `date`    String, Date or array   The selected date(s) as string (will be converted to Date object based on the format suplied) and Date object for single selection, as Array of strings or Date objects
 * `flat`    boolean Whatever if the date picker is appended to the element or triggered by an event. Default false
 * `start`   integer The day week start. Default 1 (monday)
 * `prev`    string  HTML inserted to previous links. Default '◀' (UNICODE black left arrow)

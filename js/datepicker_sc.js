@@ -699,9 +699,20 @@
                 return this.each(function(){
                     if (!$(this).data('datepicker')) {
                         options.el = this;
+                        if (options.date === undefined) {
+                            options.date = new Date();
+                        }
                         if (options.date.constructor == String) {
-                            options.date = parseDate(options.date, options.format);
-                            options.date.setHours(0,0,0,0);
+                            if (options.date === 'now') {
+                                var currentDate = new Date();
+                                options.date = parseDate(currentDate.getFullYear()
+                                    + '-' + (currentDate.getMonth() + 1)
+                                    + '-' + (currentDate.getDate()), 'Y-m-d');
+                                options.date.setHours(0,0,0,0);
+                            } else {
+                                options.date = parseDate(options.date, options.format);
+                                options.date.setHours(0,0,0,0);
+                            }
                         }
                         if (options.mode != 'single') {
                             if (options.date.constructor != Array) {
