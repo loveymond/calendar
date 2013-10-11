@@ -114,6 +114,12 @@ div.datepicker table td {
     padding: 0;
     margin: 0;
 }
+div.datepicker table td.datepickerSaturday a{
+    color:#3f3;
+}
+div.datepicker table td.datepickerSunday a{
+    color:#f33;
+}
 div.datepicker table .datepickerDays td{
     border:1px dotted #ccc;
 }

@@ -55,7 +55,7 @@ $('input').DatePicker(options);
 * `onBeforeShow`    function    日历显示之前的回调函数。
 * `onHide`  function    当日历隐藏时的回调函数
 * `onChange`    function    当日期改变时的回调函数
-* `onRender`    function    Callback function triggered when the date is rendered inside a calendar. It should return and hash with keys: 'selected' to select the date, 'disabled' to disable the date, 'className' for additional CSS class
+* `onRender`    function    当日历渲染日期的时候，回调函数被触发。它应该返回这些键的哈希：`selected`表示选择的日期，`disabled`表示禁止的日期，`className`表示增加的CSS样式。
 
 设置日期
 --------

@@ -579,7 +579,11 @@
                         fill(this);
                     }
                     if (changed) {
-                        options.onChange.apply(this, prepareDate(options));
+                        if ($(".datepickerSelected").length <= 1) {
+                            // NOTHING
+                        } else {
+                            options.onChange.apply(this, prepareDate(options));
+                        }
                     }
                 }
                 return false;
