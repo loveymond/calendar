@@ -533,6 +533,7 @@
                                 tblEl.get(0).className = 'datepickerViewMonths';
                                 break;
                             default:
+                                changed = true;
                                 var val = parseInt(el.text(), 10);
                                 tmp.addMonths(tblIndex - Math.floor(options.calendars/2));
                                 if (parentEl.hasClass('datepickerNotInMonth')) {
@@ -573,17 +574,12 @@
                                 break;
                         }
                         fillIt = true;
-                        changed = true;
                     }
                     if (fillIt) {
                         fill(this);
                     }
                     if (changed) {
-                        if ($(".datepickerSelected").length <= 1) {
-                            // NOTHING
-                        } else {
-                            options.onChange.apply(this, prepareDate(options));
-                        }
+                        options.onChange.apply(this, prepareDate(options));
                     }
                 }
                 return false;
