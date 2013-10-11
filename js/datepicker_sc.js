@@ -521,19 +521,22 @@
                             fillIt = true;
                         }
                     } else if (parentEl.is('td') && !parentEl.hasClass('datepickerDisabled')) {
+                        var currentView = '';
                         switch (tblEl.get(0).className) {
                             case 'datepickerViewMonths':
+                                currentView = 'month';
                                 options.current.setMonth(tblEl.find('tbody.datepickerMonths td').index(parentEl));
                                 options.current.setFullYear(parseInt(tblEl.find('thead th.datepickerMonth span').text(), 10));
                                 options.current.addMonths(Math.floor(options.calendars/2) - tblIndex);
                                 tblEl.get(0).className = 'datepickerViewDays';
                                 break;
                             case 'datepickerViewYears':
+                                currentView = 'year';
                                 options.current.setFullYear(parseInt(el.text(), 10));
                                 tblEl.get(0).className = 'datepickerViewMonths';
                                 break;
                             default:
-                                changed = true;
+                                currentView = 'date';
                                 var val = parseInt(el.text(), 10);
                                 tmp.addMonths(tblIndex - Math.floor(options.calendars/2));
                                 if (parentEl.hasClass('datepickerNotInMonth')) {
@@ -574,12 +577,13 @@
                                 break;
                         }
                         fillIt = true;
+                        changed = true;
                     }
                     if (fillIt) {
                         fill(this);
                     }
                     if (changed) {
-                        options.onChange.apply(this, prepareDate(options));
+                        options.onChange.call(this, currentView, prepareDate(options));
                     }
                 }
                 return false;

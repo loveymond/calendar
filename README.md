@@ -55,7 +55,9 @@ $('input').DatePicker(options);
 * `onShow`  function    当日历显示时的回调函数。
 * `onBeforeShow`    function    日历显示之前的回调函数。
 * `onHide`  function    当日历隐藏时的回调函数
-* `onChange`    function    当日期改变时的回调函数
+* `onChange`    function    当日期改变时的回调函数，参数如下：
+    + `currentView` string  ['year'|'month'|'date'] 当前视图
+    + `options` array 日历信息，分别是[格式化后的日期,Date对象,调用日历的选择器]；
 * `onRender`    function    当日历渲染日期的时候，回调函数被触发。它应该返回这些键的哈希：*selected*表示选择的日期，*disabled*表示禁止的日期，*className*表示增加的CSS样式。
 
 设置日期
@@ -160,6 +162,8 @@ A hash of parameters. All parameters are optional.
 * `onBeforeShow`    function    Callback function triggered before the date picker is shown
 * `onHide`  function    Callback function triggered when the date picker is hidden
 * `onChange`    function    Callback function triggered when the date is changed
+    + `currentView` string  ['year'|'month'|'date'] Current view type
+    + `options` array Calendar options. Three parameters: [format date,Date object,selector of trigger calendar]；
 * `onRender`    function    Callback function triggered when the date is rendered inside a calendar. It should return and hash with keys: 'selected' to select the date, 'disabled' to disable the date, 'className' for additional CSS class
 
 Set date
