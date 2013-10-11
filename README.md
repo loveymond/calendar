@@ -51,11 +51,12 @@ $('input').DatePicker(options);
 * `format`  string  日期格式. 默认是 'Y-m-d'
 * `position`    string ['top'|'left'|'right'|'bottom']  日历相对触发元素的位置。(flat模式不支持本选项). 默认是 'bottom'
 * `locale`  hash    Location: provide a hash with keys 'days', 'daysShort', 'daysMin', 'months', 'monthsShort', 'week'. 默认是 english
+* `current` string  当前的日期。
 * `onShow`  function    当日历显示时的回调函数。
 * `onBeforeShow`    function    日历显示之前的回调函数。
 * `onHide`  function    当日历隐藏时的回调函数
 * `onChange`    function    当日期改变时的回调函数
-* `onRender`    function    当日历渲染日期的时候，回调函数被触发。它应该返回这些键的哈希：`selected`表示选择的日期，`disabled`表示禁止的日期，`className`表示增加的CSS样式。
+* `onRender`    function    当日历渲染日期的时候，回调函数被触发。它应该返回这些键的哈希：*selected*表示选择的日期，*disabled*表示禁止的日期，*className*表示增加的CSS样式。
 
 设置日期
 --------
@@ -154,6 +155,7 @@ A hash of parameters. All parameters are optional.
 * `format`  string  Date format. Default 'Y-m-d'
 * `position`    string ['top'|'left'|'right'|'bottom']  Date picker's position relative to the trigger element (non flat mode only). Default 'bottom'
 * `locale`  hash    Location: provide a hash with keys 'days', 'daysShort', 'daysMin', 'months', 'monthsShort', 'week'. Default english
+* `current` string  Current date.
 * `onShow`  function    Callback function triggered when the date picker is shown
 * `onBeforeShow`    function    Callback function triggered before the date picker is shown
 * `onHide`  function    Callback function triggered when the date picker is hidden
